@@ -1026,11 +1026,13 @@ FxaaFloat4 FxaaPixelShader(
 //----------------------------------------------------------------------------------
 //#version 100
 #ifdef GL_ES
-precision mediump float;
-precision mediump int;
+    precision mediump float;
+    precision mediump int;
+#else
+    precision highp float;
 #endif
 
-precision highp float;
+
 
 uniform sampler2D sampler0;
 uniform vec2 u_texelDelta;
